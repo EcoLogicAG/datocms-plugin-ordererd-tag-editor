@@ -1,6 +1,7 @@
 {
     "name": "@ecologic/datocms-plugin-ordered-tag-editor",
-    "version": "0.0.1",
+    "version": "0.0.2",
+    "homepage": "https://github.com/EcoLogicAG/datocms-plugin-ordererd-tag-editor",
     "description": "A plugin that transforms ads an Tag editor to any text field and stores the tags sorted",
     "keywords": [
         "datocms-plugin",
@@ -9,7 +10,7 @@
     "datoCmsPlugin": {
         "title": "Sorted Tag Editor Plugin",
         "previewImage": "doc/editor.png",
-        "coverImage": "https://raw.githubusercontent.com/EcoLogicAG/datocms-plugin-ordered-tag-editor/master/doc/editor.png",
+        "coverImage": "https://raw.githubusercontent.com/EcoLogicAG/datocms-plugin-ordererd-tag-editor/master/doc/editor.png",
         "entryPoint": "dist/index.html",
         "fieldTypes": [
             "string"
