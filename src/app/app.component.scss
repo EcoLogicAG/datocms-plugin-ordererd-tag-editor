@@ -1,0 +1,17 @@
+.tag-editor {
+    display: flex;
+}
+
+.tag-item {
+    background-color: var(--light-color);
+    border-radius: 3px 0 0 3px;
+    margin: 4px;
+    padding: 6px 6px 0 6px;
+    vertical-align: middle;
+    white-space: nowrap;
+    .remove-tag {
+        cursor: pointer;
+        font-weight: 400;
+        padding: 3px 7px 3px 7px;
+    }
+}

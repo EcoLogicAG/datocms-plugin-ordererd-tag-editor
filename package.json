@@ -1,48 +1,82 @@
 {
-  "name": "datocms-plugin-ordered-tag-editor",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "~7.0.0",
-    "@angular/common": "~7.0.0",
-    "@angular/compiler": "~7.0.0",
-    "@angular/core": "~7.0.0",
-    "@angular/forms": "~7.0.0",
-    "@angular/http": "~7.0.0",
-    "@angular/platform-browser": "~7.0.0",
-    "@angular/platform-browser-dynamic": "~7.0.0",
-    "@angular/router": "~7.0.0",
-    "core-js": "^2.5.4",
-    "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.10.0",
-    "@angular/cli": "~7.0.5",
-    "@angular/compiler-cli": "~7.0.0",
-    "@angular/language-service": "~7.0.0",
-    "@types/node": "~8.9.4",
-    "@types/jasmine": "~2.8.8",
-    "@types/jasminewd2": "~2.0.3",
-    "codelyzer": "~4.5.0",
-    "jasmine-core": "~2.99.1",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~3.0.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~1.1.2",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
-  }
+    "name": "@ecologic/datocms-plugin-ordered-tag-editor",
+    "version": "0.0.1",
+    "description": "A plugin that transforms ads an Tag editor to any text field and stores the tags sorted",
+    "keywords": [
+        "datocms-plugin",
+        "ordered-tag-editor"
+    ],
+    "datoCmsPlugin": {
+        "title": "Sorted Tag Editor Plugin",
+        "previewImage": "doc/editor.png",
+        "coverImage": "https://raw.githubusercontent.com/EcoLogicAG/datocms-plugin-ordered-tag-editor/master/doc/editor.png",
+        "entryPoint": "dist/index.html",
+        "fieldTypes": [
+            "string"
+        ],
+        "pluginType": "field_editor",
+        "parameters": {
+            "global": [
+                {
+                    "id": "developmentMode",
+                    "label": "Development mode?",
+                    "type": "boolean",
+                    "hint": "Enable development logs on the console"
+                }
+            ],
+            "instance": [
+                {
+                    "id": "sortOrderDescending",
+                    "label": "Sort in descending order",
+                    "type": "boolean",
+                    "required": false
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build --prod --configuration production --base-href https://unpkg.com/@ecologic/datocms-plugin-ordered-tag-editor@$npm_package_version/dist/ --output-path dist",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e"
+    },
+    "private": true,
+    "dependencies": {
+        "@angular/animations": "~7.0.0",
+        "@angular/common": "~7.0.0",
+        "@angular/compiler": "~7.0.0",
+        "@angular/core": "~7.0.0",
+        "@angular/forms": "~7.0.0",
+        "@angular/http": "~7.0.0",
+        "@angular/platform-browser": "~7.0.0",
+        "@angular/platform-browser-dynamic": "~7.0.0",
+        "@angular/router": "~7.0.0",
+        "core-js": "^2.5.4",
+        "datocms-plugins-sdk": "0.0.8",
+        "rxjs": "~6.3.3",
+        "zone.js": "~0.8.26"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "~0.10.0",
+        "@angular/cli": "~7.0.5",
+        "@angular/compiler-cli": "~7.0.0",
+        "@angular/language-service": "~7.0.0",
+        "@types/node": "~8.9.4",
+        "@types/jasmine": "~2.8.8",
+        "@types/jasminewd2": "~2.0.3",
+        "codelyzer": "~4.5.0",
+        "jasmine-core": "~2.99.1",
+        "jasmine-spec-reporter": "~4.2.1",
+        "karma": "~3.0.0",
+        "karma-chrome-launcher": "~2.2.0",
+        "karma-coverage-istanbul-reporter": "~2.0.1",
+        "karma-jasmine": "~1.1.2",
+        "karma-jasmine-html-reporter": "^0.2.2",
+        "protractor": "~5.4.0",
+        "ts-node": "~7.0.0",
+        "tslint": "~5.11.0",
+        "typescript": "~3.1.6"
+    }
 }
