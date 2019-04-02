@@ -56,6 +56,10 @@ export class AppComponent implements OnInit {
     addTag(tag: string): void {
         if (tag.length > 0 && (this.tags.indexOf(tag, 0) === -1)) {
             this.tags.push(tag.trim());
+            const indexEmptyTag = this.tags.indexOf('', 0);
+            if (indexEmptyTag > -1) {
+                this.tags.splice(indexEmptyTag, 1);
+            }
             this.tags.sort();
             if (this.options.sortOrderDescending) {
                 this.tags.reverse();
