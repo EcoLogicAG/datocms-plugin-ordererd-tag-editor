@@ -1,9 +1,11 @@
 <div [formGroup]="form">
     <div class="tag-editor" (click)="focusTagInput()">
-        <span class="tag-item" *ngFor="let tag of tags">
-            <span class="remove-tag" (click)="removeTag(tag)">×</span>
-            {{tag}}
-        </span>
+        <div class="tag-editor-tags">
+            <span class="tag-item" *ngFor="let tag of tags">
+                <span class="remove-tag" (click)="removeTag(tag)">×</span>
+                {{tag}}
+            </span>
+        </div>
         <input #tagInput class="input-tag" type="text" (keyup)="onKeyUp($event)" formControlName="tag">
     </div>
 </div>

@@ -33,7 +33,9 @@ export class AppComponent implements OnInit {
 
             this.fieldName = this.plugin.field.attributes.label;
 
-            this.tags = this.plugin.getFieldValue(this.plugin.fieldPath).split(',');
+            const currentValue = this.plugin.getFieldValue(this.plugin.fieldPath);
+            this.tags = (currentValue && currentValue !== '') ? currentValue.split(',') : [];
+            console.log(this.tags);
 
             this.options.sortOrderDescending = this.plugin.parameters.instance.sortOrderDescending;
         });
@@ -55,7 +57,7 @@ export class AppComponent implements OnInit {
 
     addTag(tag: string): void {
         if (tag.length > 0 && (this.tags.indexOf(tag, 0) === -1)) {
-            this.tags.push(tag.trim());
+            this.tags.push(tag.replace(/,/g, '').trim());
             const indexEmptyTag = this.tags.indexOf('', 0);
             if (indexEmptyTag > -1) {
                 this.tags.splice(indexEmptyTag, 1);
