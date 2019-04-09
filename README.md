@@ -20,3 +20,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `npm run build` to build into `dist`
 
+## Release
+
+Change version in `package.json`
+
+Run `npm run build`
+
+Commmit changes, tag changes and push.
+
+Run `npm run publish`

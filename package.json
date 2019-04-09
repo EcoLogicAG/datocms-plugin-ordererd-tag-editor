@@ -1,6 +1,6 @@
 {
     "name": "@ecologic/datocms-plugin-ordered-tag-editor",
-    "version": "0.0.8",
+    "version": "0.1.0",
     "homepage": "https://github.com/EcoLogicAG/datocms-plugin-ordererd-tag-editor",
     "description": "A tag editor that stores the values in sorted order.",
     "keywords": [
@@ -39,7 +39,7 @@
         "ng": "ng",
         "start": "ng serve",
         "build": "ng build --prod --configuration production --base-href https://unpkg.com/@ecologic/datocms-plugin-ordered-tag-editor@$npm_package_version/dist/ --output-path dist",
-        "build-and-publish": "npm run build && npm publish --access public",
+        "publish": "npm publish --access public",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e"
