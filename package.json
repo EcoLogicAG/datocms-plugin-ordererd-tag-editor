@@ -1,6 +1,6 @@
 {
     "name": "@ecologic/datocms-plugin-ordered-tag-editor",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "homepage": "https://github.com/EcoLogicAG/datocms-plugin-ordererd-tag-editor",
     "description": "A tag editor that stores the values in sorted order.",
     "keywords": [

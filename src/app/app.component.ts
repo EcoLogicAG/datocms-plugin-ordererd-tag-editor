@@ -35,7 +35,6 @@ export class AppComponent implements OnInit {
 
             const currentValue = this.plugin.getFieldValue(this.plugin.fieldPath);
             this.tags = (currentValue && currentValue !== '') ? currentValue.split(',') : [];
-            console.log(this.tags);
 
             this.options.sortOrderDescending = this.plugin.parameters.instance.sortOrderDescending;
         });
